@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #FFDBD1;
+    color: #333;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #FFFCEB;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .header__logo {
+    width: 130px;
+    height: auto;
+  }
+  
+  .header__image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 1rem;
+  }
+  
+  /* Nav */
+  .nav__menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #B5C56D;
+  }
+  
+  .nav__item {
+    margin: 0.5rem;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: #f1f0ec;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .nav__link:hover {
+    background-color: #365545;
+    border-radius: 5px;
+  }
+  
+  /* Main */
+  .main {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .main__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main__text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: justify;
+  }
+  
+  .main__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main__links {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .main__links li {
+    margin: 0.5rem 0;
+  }
+  
+  .main__links a {
+    color: #ca2c5b;
+    text-decoration: underline;
+  }
+
+/* Submenú oculto por defecto */
+.nav__item--dropdown {
+  position: relative;
+}
+
+.nav__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #829141;
+  border: 1px solid #9aaa50;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  min-width: 180px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav__submenu-item {
+  width: 100%;
+}
+
+.nav__submenu-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #B5C56D;
+  transition: background-color 0.3s;
+}
+
+.nav__submenu-link:hover {
+  background-color: #768537;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.nav__item--dropdown:hover .nav__submenu {
+  display: block;
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #B5C56D;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .footer__social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer__icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer__icon:hover {
+  transform: scale(1.2);
+}
+
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav__menu {
+      flex-direction: column;
+    }
+  
+    .main {
+      padding: 1rem;
+    }
+  }
+  /*mi parte */
+  .main__theme{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+  .main__points{
+    max-width: 400px;
+    margin: 5 auto 2rem;
+    text-align: left;
+    margin-right: 50px;
+  }
+  .main__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_IMG{
+    width: 145px;
+  }
+  .main__image{
+    width: 350px;
+  }
+
+  /*Seccion de tarjetas*/
+.cards-container {
+  padding: 3rem;
+  text-align: center;
+}
+.cards-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+}
+.cards-container p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: #FFFCEB;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  color: rgb(249, 143, 185);
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card h3 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+}
