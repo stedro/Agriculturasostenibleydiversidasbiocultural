@@ -171,6 +171,9 @@
     .main {
       padding: 1rem;
     }
+    .main__form{
+      width: 50px;
+    }
   }
   /*mi parte */
   .main__theme{
